@@ -3,19 +3,16 @@
 html {
   font-size: 62.5%;
 }
-#game {
+body {
   background-image: url(/css/imgs/skye.png);
   background-size: cover;
-  height: 900px;
-  width: 100%;
-}
-
-body {
   font-family: "Bungee", sans-serif;
   font-size: 1.6rem;
   color: #7843e6;
   text-align: center;
   background-color: #222327;
+  height: 900px;
+  width: 100%;
 }
 
 h1 {
@@ -23,21 +20,42 @@ h1 {
   text-shadow: 5px 0px 10px rgba(0, 255, 255, 0.82);
 }
 
-h2 {
+h2,
+#highscore {
   font-size: 3rem;
   text-shadow: 5px 0px 10px rgba(0, 255, 255, 0.82);
 }
 
-#dino {
-  width: 50px;
-  height: 50px;
-  background-color: #7843e6;
-  border: 1px solid white;
-  position: absolute;
-  bottom: 180px;
+#game {
+  display: none;
 }
 
-#enemy {
+#dino {
+  width: 102px;
+  height: 110px;
+  background-image: url(/css/imgs/grr.png);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  bottom: 180px;
+  left: 100px;
+  animation: dino 0.5s steps(3) infinite;
+}
+
+@keyframes dino {
+  0%,
+  100% {
+    background-image: url("/css/imgs/grr.png");
+  }
+  33.33% {
+    background-image: url("/css/imgs/grr2.png");
+  }
+  66.66% {
+    background-image: url("/css/imgs/grr3.png");
+  }
+}
+
+.obstacle {
   display: inline-block;
   position: absolute;
   bottom: 180px;
@@ -55,4 +73,17 @@ h2 {
   position: absolute;
   bottom: 0;
   background-image: url(/css/imgs/ground.png);
+}
+
+#startGame {
+  background-color: #222327;
+  color: #7843e6;
+  padding: 1rem 2rem;
+  font-size: 2.3rem;
+  font-family: "Bungee", sans-serif;
+  display: inline;
+}
+
+.invisible {
+  display: none;
 }

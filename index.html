@@ -7,12 +7,17 @@
     <title>Cube Dash</title>
   </head>
   <body>
-    <section id="game">
-      <h1>CUBE DASH</h1>
+    <h1>CUBE DASH</h1>
+    <h3 id="highscore">BEST SCORE:</h3>
+    <button id="startGame">START</button>
+    <section id="game" class="invisible">
       <h2 id="score">SCORE :</h2>
       <div id="dino"></div>
-      <div id="enemy"></div>
       <div id="ground"></div>
+    </section>
+    <section id="gameOver" class="invisible">
+      <h4>GAME OVER</h4>
+      <p id="final-score">pouet</p>
     </section>
     <script src="app/script.js"></script>
   </body>
